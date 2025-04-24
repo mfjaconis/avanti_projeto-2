@@ -8,10 +8,10 @@ export const ProfileContainer = styled.main`
 `
 
 export const ProfileContent = styled.main`
-display: flex;
-justify-content: center;
-align-items: center;
-width: 804px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 804px;
     height: 257px;
     border-radius: 25px;
     background-color: ${colors.secundary_bg_color};

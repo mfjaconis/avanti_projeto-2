@@ -1,16 +1,16 @@
 import React from "react";
+import { Provider } from "react-redux";
 import Header from "./components/Header";
 import InputSearch from "./components/InputSearch";
+import UserProfile from "./components/UserProfile";
 import { Content, GlobalCss } from "./globaStyle";
 import { useGetUserQuery } from "./services/api";
-import { Provider } from "react-redux";
 import { store } from "./store";
-import UserProfile from "./components/UserProfile";
 
 export type User = {
-  name: string;
-  avatar_url: string;
-  bio: string;
+  name?: string;
+  avatar_url?: string;
+  bio?: string;
 };
 
 function App() {
@@ -24,13 +24,14 @@ function App() {
       <Content className="container">
         <Header />
         <InputSearch onSearch={(user) => setUsername(user)} />
-        
         {isLoading && <p>Carregando...</p>}
-        {error && (
-          <UserProfile error="Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente." name={""} avatar_url={""} bio={""} />
-        )}
-        {data && (
-          <UserProfile name={data.name} avatar_url={data.avatar_url} bio={data.bio} />
+        {(data || error) && (
+          <UserProfile
+            name={data?.name}
+            avatar_url={data?.avatar_url}
+            bio={data?.bio}
+            error={error ? "Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente." : undefined}
+          />
         )}
       </Content>
     </Provider>
