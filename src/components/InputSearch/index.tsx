@@ -25,7 +25,7 @@ function InputSearch({ onSearch }: InputSearchProps) {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             />
-            <button onClick={handleSearch}><SlMagnifier className='searchIcon' /></button>
+            <button type="submit" onClick={handleSearch}><SlMagnifier className='searchIcon' /></button>
         </InputContent>
         </InputContainer>
       </>

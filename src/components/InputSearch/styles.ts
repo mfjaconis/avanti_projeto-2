@@ -24,16 +24,16 @@ export const Input = styled.input`
         }
 `
 export const InputContent = styled.div`
-    position: absolute;
+    position: relative;
     button{
-        position: relative;
-        top: 3px;
-        right: 62px;
+        position: absolute;
+        top: 40px;
+        right: 0;
         width: 62px;
         height: 62px;
         border-radius: 10px;
         border-width: 1px;
-        background-color:  #005CFF;
+        background-color:${colors.terceary_bg_color};  
         cursor: pointer;
 
         .searchIcon{

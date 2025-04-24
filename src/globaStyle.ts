@@ -1,8 +1,12 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const colors = {
 	primary_bg_color: "#000",
-    primary_text_color:"#fff",
+    secundary_bg_color:"#D9D9D9",
+    terceary_bg_color: "#005CFF",
+    text_color:"#fff",
+    text_error_color: "#FF0000"
+
 };
 
 export const GlobalCss = createGlobalStyle`
@@ -17,7 +21,7 @@ export const GlobalCss = createGlobalStyle`
 
     body{
         background-color: ${colors.primary_bg_color};
-        color: ${colors.primary_text_color}
+        color: ${colors.text_color}
     }
 
     .container {
@@ -26,3 +30,8 @@ export const GlobalCss = createGlobalStyle`
         margin: 0 auto;
   }
 `;
+
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+`
