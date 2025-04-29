@@ -21,4 +21,26 @@ export const HeaderContainer = styled.header`
         height: 58px;
         margin-right: 10px;
     }
-`
+    
+    @media (max-width: 850px){
+        padding-left: 0;
+        justify-content: center;
+
+        h1{
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 470px){  
+        padding-left: 55px;
+        justify-content: start;
+
+        h1{
+            font-size: 30px;
+        }
+
+        img{
+            width: 45px;
+        }
+    }
+    `

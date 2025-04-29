@@ -3,7 +3,20 @@ import { colors } from "../../globaStyle";
 
 export const InputContainer = styled.section`
     display: flex;
+    align-items: center;
     padding-left: 20px;
+
+    @media (max-width: 850px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    @media (max-width: 470px){
+        justify-content: start;
+        padding-left: 40px;
+    }
 `
 
 export const Input = styled.input`
@@ -22,6 +35,27 @@ export const Input = styled.input`
         font-weight: 600;
         font-size: 20px;
     }
+
+    @media (max-width: 850px){
+        margin-left: 0;
+        width: 400px;
+        height: 50px;
+
+        &::placeholder {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 470px){
+        margin-left: 0;
+        width: 270px;
+        height: 40px;
+
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+  
 `
 export const InputContent = styled.div`
     position: relative;
@@ -41,6 +75,25 @@ export const InputContent = styled.div`
             width: 25px;
             height: 25px;
             color: ${colors.text_color}
+        }
+    }
+
+    @media (max-width: 850px){
+        display: flex;
+        justify-content: center;
+
+        
+        button{
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    @media (max-width: 470px){
+        
+        button{
+            height: 40px;
+            width: 40px;
         }
     }
 `
