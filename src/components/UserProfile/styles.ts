@@ -7,8 +7,7 @@ export const ProfileContainer = styled.main`
     margin: 20px 0;
 
     @media (max-width: 460px){
-        margin-left: 43px;
-        justify-content: start;
+        justify-content: center;
     }
 
 `

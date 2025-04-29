@@ -14,8 +14,7 @@ export const InputContainer = styled.section`
     }
 
     @media (max-width: 470px){
-        justify-content: start;
-        padding-left: 40px;
+        justify-content: center;
     }
 `
 

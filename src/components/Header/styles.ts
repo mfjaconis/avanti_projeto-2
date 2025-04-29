@@ -32,8 +32,7 @@ export const HeaderContainer = styled.header`
     }
 
     @media (max-width: 470px){  
-        padding-left: 55px;
-        justify-content: start;
+        justify-content: center;
 
         h1{
             font-size: 30px;
